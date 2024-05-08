@@ -1,0 +1,2 @@
+const person="john"
+console.log(person)
