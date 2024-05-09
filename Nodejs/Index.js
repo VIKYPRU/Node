@@ -47,6 +47,29 @@
 // sub(5,5)
 // div(5,8)
 
+//TYPE OF PATHS
+const path=require('node:path')
+console.log(__filename)
+console.log(__dirname)//=>folder name
+
+console.log(path.basename(__filename))
+console.log(path.basename(__dirname))
+
+console.log(path.extname(__filename))//=>extension name like .js,.html
+console.log(path.extname(__dirname))
+
+console.log(path.parse(__filename))
+console.log(path.parse(__dirname))
+
+
+console.log(path.format(path.parse(__filename)))
+
+
+console.log(path.isAbsolute(__filename))
+console.log(path.isAbsolute(__dirname))
+
+console.log(path.join(__filename))
+console.log(path.join(__dirname))
 
 //writting the file for create and update
 
@@ -133,17 +156,17 @@
 
 //html in json
 
-const http=require('node:http')
-const fs=require('node:fs')
-const server=http.createServer((req,res)=>{
-    res.writeHead(200,{
-        "content-type":"text/html"
-    })
-    fs.createReadStream('./index.html').pipe(res)
-})
-server.listen(3002,()=>{
-    console.log("server is running on port 3002")
-})
+// const http=require('node:http')
+// const fs=require('node:fs')
+// const server=http.createServer((req,res)=>{
+//     res.writeHead(200,{
+//         "content-type":"text/html"
+//     })
+//     fs.createReadStream('./index.html').pipe(res)
+// })
+// server.listen(3002,()=>{
+//     console.log("server is running on port 3002")
+// })
 
 //routing in server
 
